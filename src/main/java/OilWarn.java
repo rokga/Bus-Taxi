@@ -1,3 +1,3 @@
 public interface OilWarn {
-    void oilwarn();
+    void oilwarn(int x);
 }

@@ -1,10 +1,10 @@
 public class Taxi extends Transportation implements OilWarn,Operatable,PassengerRide,BreakTime {
-    public Taxi(int num, int oil, int speed, int max_passenger) {
-        super(num, oil, speed, max_passenger);
+    public Taxi(int num, int oil, int speed, int max_passenger  ) {
+        super(num, oil, speed, max_passenger );
     }
 
     public Taxi(int num){
-        this(num,100,0,4);
+        this(num,100,0,4  );
         int[] taxi_group = new int[num];
         for (int i = 0; i < num; i++) {
             taxi_group[i] = (num % 2 == 0) ? 990 + i*10 : 997 + i*7;
@@ -13,12 +13,12 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
     }
 
     @Override
-    public void breaktime() {
+    public void breaktime(int r) {
 
     }
 
     @Override
-    public void oilwarn() {
+    public void oilwarn(int x ) {
 
     }
 

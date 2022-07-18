@@ -6,7 +6,7 @@ public class Transportation {
     int max_passenger;
 
 
-    public Transportation(int num, int oil, int speed, int max_passenger){
+    public Transportation(int num, int oil, int speed, int max_passenger ){
         this.num = num;
         this.oil = oil;
         this.speed = speed;
@@ -14,8 +14,6 @@ public class Transportation {
     }
 
 
-
-
-
-
+    public Transportation() {
+    }
 }

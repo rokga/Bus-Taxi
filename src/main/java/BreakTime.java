@@ -1,3 +1,3 @@
 public interface BreakTime {
-    void breaktime();
+    void breaktime(int r);
 }
