@@ -1,3 +1,4 @@
+
 public class Taxi extends Transportation implements OilWarn,Operatable,PassengerRide,BreakTime,Distance {
     public Taxi(int num, int oil, int speed, int max_passenger, String object) {
         super(num, oil, speed, max_passenger);
@@ -5,10 +6,13 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
 
     public Taxi(int num) {
         this(num, 100, 0, 4, "목적지");
+
+
         int[] taxi_group = new int[num];
         for (int i = 0; i < num; i++) {
             taxi_group[i] = (num % 2 == 0) ? 990 + i * 10 : 997 + i * 7;
             System.out.println("택시 " + taxi_group[i] + " 이 생성되었습니다.");
+<
             System.out.println(taxi_group[i] + "운행");
         }
     }
@@ -28,17 +32,29 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
         if (oil <= 10) {
             System.out.println("주유가 필요 합니다.");
         }
+
     }
 
+    @Override
+    public void oilwarn() {
+        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+        System.out.println("주유 필요!!");
+        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
+        speed=0;
+    }
 
     @Override
     public void operate(int x) {
+
         oil = x;
         System.out.println("주유량: " + x );
         System.out.println("-----------------------");
+
     }
 
+
     @Override
+
     public void passengerride(int x) {
         if (x > 4) {
             System.out.println("‘최대 승객 수 초과’");
@@ -61,3 +77,4 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
 
     }
 }
+
