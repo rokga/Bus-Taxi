@@ -1,4 +1,6 @@
 public interface BreakTime {
-    void breaktime(int x);
+
+    void breaktime(int r);
 }
-// 차고지행
+
+
