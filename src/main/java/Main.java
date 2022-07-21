@@ -9,7 +9,6 @@ public class Main {
         bus.oilwarn(10);             // 주유경고 기준 값.
         bus.breaktime(0);            //  주유량에 따라 정해짐
 
-
         Taxi taxi = new Taxi(2);                          //택시 생성
         taxi.operate(10);                                  //주유 량
         taxi.oilwarn(10);                                   //주유 경고

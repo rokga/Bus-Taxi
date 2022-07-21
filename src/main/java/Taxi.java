@@ -12,7 +12,6 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
         for (int i = 0; i < num; i++) {
             taxi_group[i] = (num % 2 == 0) ? 990 + i * 10 : 997 + i * 7;
             System.out.println("택시 " + taxi_group[i] + " 이 생성되었습니다.");
-<
             System.out.println(taxi_group[i] + "운행");
         }
     }
@@ -35,13 +34,7 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
 
     }
 
-    @Override
-    public void oilwarn() {
-        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
-        System.out.println("주유 필요!!");
-        System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-");
-        speed=0;
-    }
+
 
     @Override
     public void operate(int x) {

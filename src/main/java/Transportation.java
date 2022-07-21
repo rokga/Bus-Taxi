@@ -14,7 +14,6 @@ public class Transportation {
         this.num = num;
         this.oil = oil;
         this.speed = speed;
-        this.speed_Var =speedVar;
         this.max_passenger = max_passenger;
     }
 

@@ -36,18 +36,13 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
             System.out.println("요금 확인: " + (payment) + "원");
         } else {
             System.out.println("-----------------------------");
-
-        
-
             System.out.println("탑승 승객 수: " + x);
             System.out.println("잔여 승객 수: " + (max_passenger - x));
             int payment = x * 1000;
             System.out.println("요금 확인: " + (payment) + "원");
-
             System.out.println("-----------------------------");
         }
     }
-
     @Override
     public void breaktime(int r) {
         if (oil > 10) {
@@ -58,21 +53,19 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
         System.out.println("------------------");
     }
 
+
+    @Override
+    public void operate(int x) {
+        oil = x;
+        System.out.println("주유량: "+x);
+
+    }
+
     @Override
     public void oilwarn(int x) {
         if( oil <= 10 ) {
             System.out.println("주유가 필요 합니다.");
         }
-
- 
-    }
-
-    @Override
-    public void operate(int x) {
-
-        oil = x;
-        System.out.println("주유량: "+x);
-
     }
 }
 
