@@ -38,6 +38,7 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
     public void breaktime(int x) {
         oil += x;
         System.out.println(Taxi.Status.STOP.getName());
+        speed=0;
         System.out.println("............................");
         System.out.println("주유: +"+x);
         System.out.println("현재 주유량: "+oil);
@@ -79,12 +80,18 @@ public class Taxi extends Transportation implements OilWarn,Operatable,Passenger
 
     @Override
     public void speed_change(int x) {
-        speed_Var=x;
-        speed+=speed_Var;
-        System.out.println("............................");
-        System.out.println("속도가 "+x+"만큼 증가하였습니다.");
-        System.out.println("현재속도: "+speed);
-        System.out.println("............................");
+        if(speed==0){
+            System.out.println("-*--*--*--*--*--*--*--*--*--*-");
+            System.out.println("현재는 속도를 높일 수 없습니다!!");
+            System.out.println("-*--*--*--*--*--*--*--*--*--*-");
+        }else {
+            speed_Var = x;
+            speed += speed_Var;
+            System.out.println("............................");
+            System.out.println("속도가 " + x + "만큼 증가하였습니다.");
+            System.out.println("현재속도: " + speed);
+            System.out.println("............................");
+        }
     }
 
     public enum Status{

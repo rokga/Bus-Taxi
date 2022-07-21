@@ -86,7 +86,7 @@ public class Bus extends Transportation implements Operatable, BreakTime, Passen
     public void speed_change(int x) {
         if(speed==0){
             System.out.println("-*--*--*--*--*--*--*--*--*--*-");
-            System.out.println("차고지에선 속도를 높일 수 없습니다!!");
+            System.out.println("현재는 속도를 높일 수 없습니다!!");
             System.out.println("-*--*--*--*--*--*--*--*--*--*-");
         }else {
             speed_Var = x;
