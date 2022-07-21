@@ -12,6 +12,7 @@ public class Main {
         Taxi taxi = new Taxi(2);
         taxi.passengerride(2);
         taxi.destination("서울역", 2);
+        taxi.speed_change(3);
         taxi.operate(80);
         taxi.passengerride(5);
         taxi.passengerride(3);
@@ -21,7 +22,6 @@ public class Main {
         taxi.breaktime(60);
 
     }
-
 };
 
 
