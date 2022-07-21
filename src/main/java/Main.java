@@ -1,13 +1,7 @@
 
-
-
 public class Main {
     public static void main(String[] args) {
-        for (Bus.Status type : Bus.Status.values()){
-            System.out.println(type);
-        };
         Bus bus = new Bus(2);
-        System.out.println(Bus.Status.RUN.name());
         bus.passengerride(2);
         bus.operate(50);
         bus.breaktime(10);
@@ -23,6 +17,8 @@ public class Main {
         taxi.passengerride(3);
         taxi.destination("구로디지털 단지역", 12);
         taxi.operate(20);
+        taxi.passengerride(3);
+        taxi.breaktime(60);
 
     }
 
